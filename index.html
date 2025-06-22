@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drink Tracker with Spinning Punishment Wheel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🥃 Drink Tracker with Spinning Wheel 🎈</h1>
+
+    <div class="form">
+      <input type="text" id="memberName" placeholder="Enter name" />
+      <input type="file" id="memberImage" accept="image/*" />
+      <button onclick="addMember()">Add Member</button>
+    </div>
+
+    <div id="members" class="member-grid"></div>
+
+    <h2>🍇 Punishment Wheel</h2>
+    <div class="wheel-container">
+      <div class="arrow"></div>
+      <div id="wheel" class="wheel"></div>
+    </div>
+    <button class="spin-btn" onclick="spinWheel()">Spin the Wheel</button>
+
+    <div class="form">
+      <input type="text" id="newPunishment" placeholder="Add a punishment" />
+      <button onclick="addPunishment()">Add Punishment</button>
+    </div>
+
+    <h2>📅 Shot Summary</h2>
+    <ul id="shotSummary"></ul>
+  </div>
+
+  <!-- Punishment Modal -->
+  <div id="punishmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Punished: <span id="punishedName"></span></h3>
+      <img id="punishedImage" src="" alt="Punished Image" />
+      <p>Punishment: <strong><span id="punishmentText"></span></strong></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
